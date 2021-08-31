@@ -7,7 +7,7 @@
 const Classroom = use('App/Models/Classroom')
 
 class ClassroomController {
-
+//
 //RF09: Permitir que professor cadastre uma nova sala.
   async store ({ request, response }) {
     const {students, ...data } = request.only(['room_number','classroom_capacity','classroom_available','professor_id', 'students'])
