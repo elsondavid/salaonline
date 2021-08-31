@@ -9,8 +9,15 @@ const Student = use('App/Models/Student')
 class StudentController {
 
   //RF01: Permitir que aluno se cadastre na aplicação. 
-  async store ({ request, response }) {
+  async store ({ request, response, auth}) {
     const data = request.only(['student_name', 'student_email', 'student_registration', 'student_date','student_password'])
+    
+    // var findUser = await Student.query().where('student_email', student_email).first()
+
+    // if (findUser) {
+    //   return response.status(409).send({ message: 'email já cadastrado' })
+    // }
+
     const student = await Student.create(data)
     return student
   }
