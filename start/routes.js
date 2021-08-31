@@ -29,6 +29,9 @@ Route.post('/sala/registrar','ClassroomController.store')
 Route.put('/sala/adicionaraluno/:id','ClassroomController.addStudent')
 Route.get('/sala/mostrarsala/:id','ClassroomController.show')
 Route.put('/sala/atualizar/:id','ClassroomController.update')
+Route.delete('/sala/apagaraluno/:classroom_id','ClassroomController.excludeStudent')
+Route.delete('/sala/apagar/:id','ClassroomController.destroy')
+Route.get('/sala/todosalunos/:classroom_id','ClassroomController.getallStudentclassroom')
 
 Route.group(()=>{
   Route.resource('aluno','StudentController').apiOnly()
