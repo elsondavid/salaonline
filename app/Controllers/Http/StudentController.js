@@ -7,7 +7,7 @@
 const Student = use('App/Models/Student')
 
 class StudentController {
-//
+
   //RF01: Permitir que aluno se cadastre na aplicação. 
   async store ({ request, response, auth}) {
     const data = request.only(['student_name', 'student_email', 'student_registration', 'student_date','student_password'])

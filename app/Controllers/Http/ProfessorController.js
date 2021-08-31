@@ -20,7 +20,7 @@ class ProfessorController {
     const professor = await Professor.findOrFail(params.id)
     return professor
   }
-//
+
   //Permitir que professor edite seus dados de cadastro  
    async update ({ params, request, response }) {
     const data = request.only(['professor_name', 'professor_email', 'professor_registration', 'professor_date']);
