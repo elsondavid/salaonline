@@ -61,7 +61,6 @@ class ClassroomController {
   //RF11: Permitir que professor exclua os dados de uma sala. ok feito
   async destroy ({ params}) {
     const classroom = await Classroom.findOrFail(params.id)
-    console.log('chegou do dlt')
     await classroom.delete();
   }
 
